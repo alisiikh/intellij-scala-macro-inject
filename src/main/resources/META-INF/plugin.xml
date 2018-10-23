@@ -1,0 +1,17 @@
+<idea-plugin>
+    <id>com.alisiikh.intellij-scala-macro-inject</id>
+    <name>Scala macro code injector</name>
+    <vendor>alisiikh</vendor>
+
+    <description>Plugin for syntax highlighting of macro generated code</description>
+
+    <depends>org.intellij.scala</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <extensions defaultExtensionNs="org.intellij.scala">
+        <syntheticMemberInjector implementation="com.alisiikh.injector.Injector"/>
+    </extensions>
+</idea-plugin>
